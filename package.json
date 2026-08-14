@@ -1,0 +1,18 @@
+{
+  "name": "real-time-ops-center",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-grade, event-driven Real-Time Incident & Ops Center",
+  "scripts": {
+    "dev:backend": "npm --prefix apps/backend run dev",
+    "dev:frontend": "npm --prefix apps/frontend run dev",
+    "simulate": "npx ts-node scripts/simulate-stream.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.19.0"
+  }
+}
