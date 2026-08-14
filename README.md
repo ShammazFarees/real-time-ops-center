@@ -1,5 +1,6 @@
 # 🚨 Real-Time Incident & Ops Center (Multi-Agent & Event-Driven)
 
+[![License](https://img.shields.io/badge/License-All_Rights_Reserved-red.svg)](LICENSE)
 [![Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-Open_Dashboard-0070F3?style=for-the-badge&logo=vercel&logoColor=white)](https://real-time-ops-center-shammazfarees-projects.vercel.app)
 [![MongoDB Atlas](https://img.shields.io/badge/Database-MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/cloud/atlas)
 [![Upstash Redis](https://img.shields.io/badge/Queue-Upstash_Redis-00E599?style=for-the-badge&logo=redis&logoColor=white)](https://upstash.com/)
