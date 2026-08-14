@@ -103,7 +103,7 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
 
   const updateIncidentStep = async (incidentId: string, stepNumber: number) => {
-    const socketUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+    const socketUrl = import.meta.env.VITE_BACKEND_URL || '';
     try {
       const res = await fetch(`${socketUrl}/api/incidents/${incidentId}/dispatch`, {
         method: 'PATCH',
@@ -121,7 +121,7 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   };
 
   const dispatchUnit = async (incidentId: string, unitId: string) => {
-    const socketUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+    const socketUrl = import.meta.env.VITE_BACKEND_URL || '';
     try {
       const res = await fetch(`${socketUrl}/api/incidents/${incidentId}/dispatch`, {
         method: 'PATCH',
