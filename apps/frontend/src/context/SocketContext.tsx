@@ -79,7 +79,25 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
     setSocket(newSocket);
 
+    // Automatic polling fallback for serverless environments (e.g. Vercel)
+    const pollInterval = setInterval(async () => {
+      try {
+        const backendUrl = import.meta.env.VITE_BACKEND_URL || '';
+        const res = await fetch(`${backendUrl}/api/incidents`);
+        if (res.ok) {
+          const list: Incident[] = await res.json();
+          if (list && list.length > 0) {
+            setIncidents(list);
+            setIsConnected(true);
+          }
+        }
+      } catch (e) {
+        // Silently ignore polling errors if web socket is active
+      }
+    }, 3000);
+
     return () => {
+      clearInterval(pollInterval);
       newSocket.close();
     };
   }, []);
