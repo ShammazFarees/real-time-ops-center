@@ -156,4 +156,4 @@ real-time-ops-center/
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for details.
+Distributed under the Proprietary All Rights Reserved License. Copyright (c) 2026 Shammaz Farees. See [LICENSE](LICENSE) for details.
