@@ -21,8 +21,9 @@ app.use(async (req, res, next) => {
   next();
 });
 
-// Routes
+// Support all Vercel serverless route prefixes
 app.use('/api/incidents', incidentRoutes);
+app.use('/incidents', incidentRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({

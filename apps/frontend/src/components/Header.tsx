@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
   const criticalCount = incidents.filter(i => i.severity === 'CRITICAL').length;
 
   const triggerSeed = async () => {
-    const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || '';
     try {
       await fetch(`${backendUrl}/api/incidents/seed`, { method: 'POST' });
     } catch (e) {
