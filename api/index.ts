@@ -164,7 +164,6 @@ function processIncidentEvaluation(payload: { incidentId: string; title: string;
 
   // STRICT FILTER: Only suggest units compatible with the specific incident category!
   const compatibleUnits = unitsPool.filter(u => u.compat.includes(category));
-  // If no exact match, fallback to general security/rescue
   const candidateUnits = compatibleUnits.length > 0 ? compatibleUnits : unitsPool;
 
   const suggestedUnits = candidateUnits.map(u => {
@@ -343,11 +342,6 @@ const handleDispatch = async (req: Request, res: Response) => {
 
 const handleSeed = async (req: Request, res: Response) => {
   try {
-    inMemoryStore.clear();
-    if (isConnected) {
-      try { await IncidentModel.deleteMany({}); } catch (e) {}
-    }
-
     const samples = [
       {
         title: 'Armed Robbery Security Alert - Blue Area Islamabad',
@@ -363,6 +357,31 @@ const handleSeed = async (req: Request, res: Response) => {
         title: 'Cardiac Arrest Call - F-6 Markaz Market',
         rawPayload: 'URGENT MEDICAL: Elderly male collapsed unconscious at F-6 Markaz plaza. Bystander CPR in progress. Emergency Ambulance requested.',
         coordinates: [73.0689, 33.7250]
+      },
+      {
+        title: 'Nullah Lai Urban Flood Spillover Warning - Rawalpindi',
+        rawPayload: 'NATURAL HAZARD: Rapid water level rise at Katarian bridge reaching 18ft danger mark. Rescue 1122 issuing evacuation order.',
+        coordinates: [73.0353, 33.7165]
+      },
+      {
+        title: 'Industrial Chemical Tank Leak - I-9 Sector Islamabad',
+        rawPayload: 'HAZMAT ALERT: Corrosive solvent drum punctured during loading in I-9/3 Industrial Area. Toxic fumes spreading across compound.',
+        coordinates: [73.0450, 33.6690]
+      },
+      {
+        title: 'High-Speed Collision & Entrapment - Islamabad Expressway',
+        rawPayload: 'URGENT MEDICAL: 3-car pileup on Expressway near Faizabad interchange. 2 passengers trapped requiring hydraulic rescue tools.',
+        coordinates: [73.0805, 33.6644]
+      },
+      {
+        title: 'High-Voltage Transformer Detonation - Saddar Rawalpindi',
+        rawPayload: 'INFRASTRUCTURE CRITICAL: Detonation heard at Saddar commercial feeder transformer. Local blackout and secondary line fire.',
+        coordinates: [73.0545, 33.6999]
+      },
+      {
+        title: 'Highway Delivery Truck Overturn - GT Road Interchange',
+        rawPayload: 'TRAFFIC CRITICAL: Freight truck overturned on GT Road blocking 2 lanes. Traffic Police requesting heavy recovery crane.',
+        coordinates: [73.0210, 33.6933]
       }
     ];
 
@@ -387,7 +406,7 @@ const handleSeed = async (req: Request, res: Response) => {
       results.push(docData);
     }
 
-    return res.json({ message: 'Seeded Pakistan incidents with strict category filtering', count: results.length, incidents: results });
+    return res.json({ message: 'Seeded 8 diverse Pakistan emergency incidents', count: results.length, incidents: results });
   } catch (err: any) {
     return res.status(500).json({ error: err.message });
   }
