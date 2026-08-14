@@ -1,18 +1,25 @@
 # 🚨 Real-Time Incident & Ops Center (Multi-Agent & Event-Driven)
 
-[![Vercel Deployment](https://img.shields.io/badge/Production-Live_on_Vercel-000000?logo=vercel&logoColor=white)](https://real-time-ops-center-shammazfarees-projects.vercel.app)
-[![MongoDB Atlas](https://img.shields.io/badge/Database-MongoDB_Atlas-47A248?logo=mongodb&logoColor=white)](https://www.mongodb.com/cloud/atlas)
-[![Upstash Redis](https://img.shields.io/badge/Queue-Upstash_Redis-00E599?logo=redis&logoColor=white)](https://upstash.com/)
-[![Python](https://img.shields.io/badge/Python-3.11%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.109%2B-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![LangGraph](https://img.shields.io/badge/AI_Orchestration-LangGraph-FF6F00?logo=langchain&logoColor=white)](https://langchain-ai.github.io/langgraph/)
-[![Node.js](https://img.shields.io/badge/Node.js-20%2B-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-[![React](https://img.shields.io/badge/React-18%2B-61DAFB?logo=react&logoColor=white)](https://react.dev/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-Open_Dashboard-0070F3?style=for-the-badge&logo=vercel&logoColor=white)](https://real-time-ops-center-shammazfarees-projects.vercel.app)
+[![MongoDB Atlas](https://img.shields.io/badge/Database-MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/cloud/atlas)
+[![Upstash Redis](https://img.shields.io/badge/Queue-Upstash_Redis-00E599?style=for-the-badge&logo=redis&logoColor=white)](https://upstash.com/)
 
-> An enterprise-grade, event-driven **Emergency Dispatch & Ops Center** powered by a **Domain-Strict Multi-Agent AI Pipeline** (LangGraph), MongoDB Atlas GeoJSON 2dsphere indexing, Upstash Redis queues, and a sleek dark-mode geospatial Leaflet map centered on Pakistan (Islamabad / Rawalpindi).
+> An enterprise-grade, event-driven **Emergency Dispatch & Ops Center** powered by a **Domain-Strict Multi-Agent AI Pipeline** (LangGraph), MongoDB Atlas GeoJSON 2dsphere indexing, Upstash Redis queues, and a dark-mode geospatial Leaflet map centered on Pakistan (Islamabad / Rawalpindi).
 
-👉 **Live Demo**: **[https://real-time-ops-center-shammazfarees-projects.vercel.app](https://real-time-ops-center-shammazfarees-projects.vercel.app)**
+---
+
+## 🌐 Live Interactive Demo
+
+Test the live production deployment directly in your browser with zero setup:
+
+👉 **[Launch Live Command Center Dashboard](https://real-time-ops-center-shammazfarees-projects.vercel.app)**
+
+### 🎮 How to Test the Live Demo:
+1. **Open the App**: Navigate to **[https://real-time-ops-center-shammazfarees-projects.vercel.app](https://real-time-ops-center-shammazfarees-projects.vercel.app)**.
+2. **Trigger Emergency Seed**: Click the **`Inject Seed`** button in the top header bar to simulate live emergency incidents across Islamabad & Rawalpindi (*Bank Robbery at Blue Area, Commercial Fire on Jinnah Avenue, Cardiac Emergency at F-6 Markaz*).
+3. **Inspect AI Agent Reasoning**: Click any incident card on the left feed to view the step-by-step AI reasoning trace (*Agent 1 Triage, Agent 2 Geospatial Optimizer, Agent 3 Action Planner*).
+4. **Dispatch Responder Units**: Click **`DISPATCH`** on recommended Pakistani responder units (**Rescue 1122**, **Edhi Ambulance 115**, **Islamabad Police Eagle Squad**) to watch the status change to `IN_PROGRESS` live!
+5. **Interactive Checklist**: Click any item in the **Action Checklist** to toggle task completion checkmarks in real time.
 
 ---
 
